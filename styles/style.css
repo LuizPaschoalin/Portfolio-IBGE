@@ -11,9 +11,13 @@
     border: 0;
 }
 body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     box-sizing: border-box;
     background-color: #10316B;
 }
+
 
 .title {
     font-family: var(--h1-font);
@@ -36,7 +40,7 @@ body {
     justify-content: center;
     column-gap: 50px;
     row-gap: 50px;
-    padding-top: 140px;
+    padding: 140px;
 }
 .content__button {
     display: flex;
@@ -59,12 +63,9 @@ body {
 
 .footer {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     font-family: var(--h2-font);
     color: #F2F7FF;
     background-color: #FDBE34;
     padding: 23px 0px;
-    position: absolute;
-    bottom:0;
 }
