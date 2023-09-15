@@ -5,39 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-    const cityTableBody = document.getElementById('cityTableBody');
-    fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados/AC/microrregioes')
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(cityData => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${cityData.nome}</td>
-                    <td>${cityData.microrregiao.mesorregiao.UF.sigla}</td>
-                `;
-                cityTableBody.appendChild(row);
-            });
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error);
+            const cityTableBody = document.getElementById('cityTableBody');
+            fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados/AC/municipios')
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(cityData => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `<td>${cityData.nome}</td>`;
+                        cityTableBody.appendChild(row);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
         });
-});
     </script>
     <link rel="stylesheet" href="styles/style_cities.css">
-    <title>Brazilian Cities</title>
+    <title>Acre</title>
 </head>
 <body>
-    <a href="Index.html" style="text-decoration: none;">
+    <a href="states_all.html" style="text-decoration: none;">
         <h1 class="title">↩ IBGE</h1>
     </a>
-    <h2 class="subtitle">All Brazilian Cities</h2>
-
+    <h2 class="subtitle">Acre Cities</h2>
+    <p style="text-align: center;"><img src="assets/states-br/AC.png" alt="Regions Logo" style="height: 105px; width: 130px;"></p>
+   
     <main class="content">
         <table class="content__table">
             <thead>
                 <tr class="content__table__header">
                     <th>City</th>
-                    <th>State</th>
                 </tr>
             </thead>
             <tbody class="content__table__body" id="cityTableBody">

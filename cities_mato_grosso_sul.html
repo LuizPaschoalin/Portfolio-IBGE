@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cityTableBody = document.getElementById('cityTableBody');
+            fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados/ms/municipios')
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(cityData => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `<td>${cityData.nome}</td>`;
+                        cityTableBody.appendChild(row);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        });
+    </script>
+    <link rel="stylesheet" href="styles/style_cities.css">
+    <title>Mato Grosso do Sul</title>
+</head>
+<body>
+    <a href="states_all.html" style="text-decoration: none;">
+        <h1 class="title">↩ IBGE</h1>
+    </a>
+    <h2 class="subtitle">Mato Grosso do Sul Cities</h2>
+    <p style="text-align: center;"><img src="assets/states-br/ms.png" alt="Regions Logo" style="height: 105px; width: 130px;"></p>
+   
+    <main class="content">
+        <table class="content__table">
+            <thead>
+                <tr class="content__table__header">
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody class="content__table__body" id="cityTableBody">
+            </tbody>
+        </table>
+        <script src="script.js"></script>
+       
+        
+    </main>
+    
+    <footer class="footer"><p>Developed by Luiz Paschoalin</p></footer>
+</body>
+</html>

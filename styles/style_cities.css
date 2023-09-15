@@ -32,6 +32,7 @@ body {
     font-size: 30px;
     color: #F2F7FF;
     text-align: center;
+    padding: 20px;
 }
 .content {
     display: flex;
