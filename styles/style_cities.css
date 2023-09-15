@@ -39,6 +39,9 @@ body {
     justify-content: space-around;
     padding: 60px 140px 140px 140px; 
 }
+.content__table {
+    
+}
 .content__table__header {
     background-color: #FDBE34;
     color: #F2F7FF;
@@ -52,6 +55,8 @@ td {
     color: #F2F7FF;
      padding-top: 10px;
      font-size: 16px;
+     -webkit-column-count: 2;
+        column-count: 2;
 }
 .footer {
     width: 100%;
