@@ -59,6 +59,9 @@ body {
     padding: 20px 40px 20px 40px;
 
 }
+.content__button:hover {
+    border: 2px solid #FDBE34;
+}
 .footer {
     width: 100%;
     text-align: center;

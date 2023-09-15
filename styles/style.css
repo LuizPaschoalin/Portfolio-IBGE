@@ -57,7 +57,10 @@ body {
     border: 2px solid;
     border-radius: 8px;
     padding: 20px 40px 20px 40px;
+}
 
+.content__button:hover {
+    border: 2px solid #FDBE34;
 }
 
 
