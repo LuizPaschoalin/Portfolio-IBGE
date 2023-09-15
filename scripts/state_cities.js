@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cityTableBody = document.getElementById('cityTableBody');
-    fetch('https://servicodados.ibge.gov.br/api/v1/localidades/municipios')
+    fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados/AC/microrregioes')
         .then(response => response.json())
         .then(data => {
             data.forEach(cityData => {

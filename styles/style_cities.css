@@ -35,13 +35,22 @@ body {
 }
 .content {
     display: flex;
-    justify-content: space-between;
-    padding: 140px;
+    justify-content: space-around;
+    padding: 60px 140px 140px 140px; 
 }
-.content__table {
-    font-family: var(--h2-font);
-    font-size: 25px;
+.content__table__header {
+    background-color: #FDBE34;
     color: #F2F7FF;
+    text-align: start;
+    font-family: var(--h2-font);
+    font-size: 24px;
+}
+/* TD is the CSS for each row */
+td {
+    font-family: var(--h2-font);
+    color: #F2F7FF;
+     padding-top: 10px;
+     font-size: 16px;
 }
 .footer {
     width: 100%;
