@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&family=Solway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&family=Solway:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bevan&family=Solway:wght@700;800&display=swap');
+
+:root {
+    --h1-font: 'Bevan', serif;
+    --h2-font: 'Solway', serif;
+}
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #10316B;
+}
+
+.title {
+    font-family: var(--h1-font);
+    font-size: 66px;
+    color: #FDBE34;
+    text-align: center;
+    padding-top: 5%;
+}
+.subtitle {
+    font-family: var(--h2-font);
+    font-weight: 800;
+    font-size: 30px;
+    color: #F2F7FF;
+    text-align: center;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 140px;
+}
+.content__table {
+    font-family: var(--h2-font);
+    font-size: 25px;
+    color: #F2F7FF;
+}
+.footer {
+    width: 100%;
+    text-align: center;
+    font-family: var(--h2-font);
+    color: #F2F7FF;
+    background-color: #FDBE34;
+    padding: 23px 0px;
+}   
